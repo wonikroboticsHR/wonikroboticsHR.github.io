@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>원익로보틱스 채용 | Wonik Robotics</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;word-break:keep-all;overflow-wrap:break-word}
+:root{
+  --navy:#0C1A3E;
+  --blue:#1A5FBF;
+  --blue2:#2E7DD1;
+  --blue-lt:#E8F0FC;
+  --blue-pill:#D0E3F8;
+  --gray:#64748B;
+  --gray-lt:#F1F5F9;
+  --border:#E2E8F0;
+  --white:#FFFFFF;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",sans-serif;background:#F8FAFF;color:#1E293B;font-size:14px;line-height:1.6}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#EEF3FB 0%,#F8FAFF 60%,#E8F0FC 100%);border-bottom:1.5px solid var(--border);position:relative;overflow:hidden;padding:52px 0 0}
+.hero-inner{max-width:960px;margin:0 auto;padding:0 48px;display:flex;align-items:flex-end;gap:0}
+.hero-text{flex:1;padding-bottom:52px;z-index:2}
+.hero-logo{margin-bottom:22px}
+.hero-logo img{height:36px}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(26,95,191,0.10);border:1px solid rgba(26,95,191,0.25);color:var(--blue);font-size:11px;font-weight:600;padding:4px 12px;border-radius:999px;margin-bottom:18px;letter-spacing:.05em}
+.hero-title{font-size:30px;font-weight:800;color:var(--navy);line-height:1.28;margin-bottom:14px}
+.hero-title span{color:var(--blue2)}
+.hero-sub{font-size:13px;color:var(--gray);line-height:1.8;max-width:460px;word-break:keep-all}
+.hero-tags{display:flex;flex-wrap:nowrap;gap:7px;margin-top:22px;overflow:hidden}
+.hero-tag{font-size:11px;font-weight:600;padding:3px 10px;border-radius:999px;background:rgba(26,95,191,0.08);color:var(--blue);border:1px solid rgba(26,95,191,0.18)}
+.hero-img{width:385px;flex-shrink:0;align-self:flex-end;z-index:2;margin-bottom:110px}
+.hero-img img{width:100%;display:block}
+
+/* STATS BAR */
+.stats-bar{background:var(--white);border-bottom:1px solid var(--border)}
+.stats-inner{max-width:960px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:repeat(4,1fr)}
+.stat-item{padding:18px 0;text-align:center;border-right:1px solid var(--border)}
+.stat-item:last-child{border-right:none}
+.stat-num{font-size:18px;font-weight:800;color:var(--navy)}
+.stat-lbl{font-size:11px;color:var(--gray);margin-top:2px;font-weight:500}
+
+/* LAYOUT */
+.page{max-width:960px;margin:0 auto;padding:44px 48px 80px}
+
+/* SECTION */
+.sec{margin-top:52px}
+.sec-title{font-size:17px;font-weight:800;color:var(--navy);margin-bottom:6px;display:flex;align-items:center;gap:10px}
+.sec-title .ico{font-size:19px}
+.sec-divider{height:1px;background:var(--border);margin:8px 0 24px}
+
+/* ABOUT CARDS */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.acard{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:22px 24px;position:relative;overflow:hidden}
+.acard::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--blue2);border-radius:0}
+.acard-icon{font-size:22px;margin-bottom:10px}
+.acard-title{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:7px}
+.acard-desc{font-size:13px;color:var(--gray);line-height:1.75}
+
+/* NEWS */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ncard{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:18px 20px;display:flex;flex-direction:column;gap:8px}
+.ncard-date{font-size:11px;color:var(--gray);font-weight:600;letter-spacing:.03em}
+.ncard-title{font-size:13px;font-weight:700;color:var(--navy);line-height:1.5;flex:1}
+.ncard-badge{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--blue-lt);color:var(--blue2);width:fit-content}
+
+/* TALENT */
+.talent-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tcard{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:24px;text-align:center}
+.tcard-num{width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+.tcard-title{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:6px}
+.tcard-sub{font-size:12px;color:var(--blue2);font-weight:600;margin-bottom:10px}
+.tcard-desc{font-size:12px;color:var(--gray);line-height:1.7}
+
+/* CULTURE BOX */
+.culture-box{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:26px 30px}
+.culture-inner{display:flex;align-items:flex-start;gap:16px}
+.culture-bulb{font-size:22px;flex-shrink:0;margin-top:3px}
+.culture-text{font-size:14px;color:#334155;line-height:2.1}
+.cbadge{display:inline-block;padding:1px 8px;border-radius:4px;font-weight:700;font-size:13px;margin:0 2px}
+.cb1{background:#FEF3C7;color:#92400E}
+.cb2{background:#E0F2FE;color:#0369A1}
+.cb3{background:#DCFCE7;color:#166534}
+.cb4{background:#F3E8FF;color:#7E22CE}
+.cb5{background:#FFE4E6;color:#9F1239}
+
+/* BENEFIT */
+.benefit-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.bitem{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:12px}
+.bcheck{width:22px;height:22px;border-radius:6px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--blue2);font-size:12px;font-weight:800}
+.btext{font-size:13px;color:#334155;font-weight:500;line-height:1.45}
+
+/* FILTER + JOB LIST */
+.filter-row{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px}
+.fbtn{font-size:12px;font-weight:700;padding:6px 16px;border-radius:999px;border:1.5px solid var(--border);background:var(--white);color:var(--gray);cursor:pointer;transition:all .15s}
+.fbtn.active,.fbtn:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.jlist{display:flex;flex-direction:column;border:1.5px solid var(--border);border-radius:14px;overflow:hidden;background:var(--white)}
+.jcard+.jcard{border-top:1px solid var(--border)}
+.jhead{padding:15px 20px;display:flex;align-items:center;gap:13px;cursor:pointer;transition:background .12s}
+.jhead:hover{background:var(--gray-lt)}
+.jicon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;background:var(--blue-lt)}
+.jmeta{flex:1;min-width:0}
+.jtitle{font-size:14px;font-weight:700;color:var(--navy)}
+.jtags{display:flex;gap:5px;margin-top:5px;flex-wrap:wrap}
+.tag{font-size:11px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--blue-pill);color:var(--blue2)}
+.tag.g{background:#D1FAE5;color:#065F46}
+.chev{font-size:17px;color:var(--gray);transition:transform .2s;flex-shrink:0}
+.jdetail{display:none;padding:0 20px 20px;border-top:1px solid var(--border)}
+.jdetail.open{display:block}
+.rbox{background:var(--blue-lt);border-radius:10px;padding:11px 16px;margin:13px 0;display:flex;gap:2rem;flex-wrap:wrap}
+.ri .rl{font-size:10px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.06em}
+.ri .rv{font-size:13px;font-weight:700;color:var(--navy);margin-top:2px}
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.dc h4{font-size:10px;font-weight:800;color:var(--gray);text-transform:uppercase;letter-spacing:.07em;margin-bottom:9px;border-bottom:1px solid var(--border);padding-bottom:5px}
+.dc ul{list-style:none;padding:0}
+.dc li{font-size:12px;color:#334155;padding:3px 0 3px 13px;position:relative;line-height:1.55}
+.dc li::before{content:"·";position:absolute;left:0;color:var(--blue2);font-weight:700}
+.pref{margin-top:13px}
+
+/* PROCESS */
+.process-wrap{background:var(--white);border:1.5px solid var(--border);border-radius:14px;overflow:hidden}
+.process-row{display:grid;grid-template-columns:repeat(6,1fr)}
+.ps{padding:18px 8px;text-align:center;position:relative;border-right:1px solid var(--border)}
+.ps:last-child{border-right:none}
+.ps::after{content:"→";position:absolute;right:-9px;top:50%;transform:translateY(-50%);color:#CBD5E1;font-size:13px;z-index:1}
+.ps:last-child::after{display:none}
+.pn{width:28px;height:28px;border-radius:50%;background:var(--navy);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 7px}
+.pname{font-size:11px;color:var(--gray);font-weight:600}
+.process-note{padding:12px 20px;background:var(--gray-lt);border-top:1px solid var(--border);font-size:11px;color:var(--gray);line-height:1.8}
+
+/* LOCATION */
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.lc{background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:16px 20px;display:flex;gap:13px;align-items:flex-start}
+.lc-dot{width:9px;height:9px;border-radius:50%;background:var(--blue2);margin-top:5px;flex-shrink:0}
+.ln{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.la{font-size:12px;color:var(--gray);line-height:1.65}
+
+/* APPLY BAR */
+.apply-bar{background:var(--navy);border-radius:16px;padding:28px 36px;display:flex;align-items:center;justify-content:space-between;margin-top:44px;gap:24px}
+.apply-left h3{font-size:17px;font-weight:800;color:#fff;margin-bottom:6px}
+.apply-left p{font-size:12px;color:#94A3B8;line-height:1.7}
+.apply-left .contact{margin-top:8px;font-size:12px;color:#60A5FA}
+.abtn{font-size:14px;font-weight:800;padding:14px 36px;background:var(--blue2);color:#fff;border:none;border-radius:10px;cursor:pointer;white-space:nowrap;text-decoration:none;display:inline-block;transition:background .15s}
+.abtn:hover{background:#1A5FBF}
+
+.hidden{display:none!important}
+.culture-img-box{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:32px 36px;overflow:hidden}
+</style>
+</head>
+<body>
+<!--
+====================================================
+이 파일은 GitHub 웹에서 직접 수정할 수 있도록 정리되었습니다.
+핵심 편집 영역은 맨 아래 <script> 안의 SITE_DATA 입니다.
+시각 디자인(CSS)은 건드리지 않고, 텍스트/포지션/링크만 수정하세요.
+====================================================
+-->
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-logo"><img id="heroLogo" alt="Wonik Robotics"></div>
+      <div class="hero-badge" id="heroBadge"></div>
+      <h1 class="hero-title" id="heroTitle"></h1>
+      <p class="hero-sub" id="heroSub"></p>
+      <div class="hero-tags" id="heroTags"></div>
+    </div>
+    <div class="hero-img"><img id="heroImage" alt="원익로보틱스 메인 이미지"></div>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stats-inner" id="statsRoot"></div>
+</div>
+
+<div class="page">
+  <div class="sec">
+    <div class="sec-title"><span class="ico">🏭</span> Wonik Robotics는...</div>
+    <div class="sec-divider"></div>
+    <div class="about-grid" id="aboutGrid"></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title"><span class="ico">📰</span> 이런 일들이 있었어요</div>
+    <div class="sec-divider"></div>
+    <div class="news-grid" id="newsGrid"></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title"><span class="ico">🌟</span> 우리가 찾는 인재</div>
+    <div class="sec-divider"></div>
+    <div class="talent-grid" id="talentGrid"></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title"><span class="ico">👷</span> 우리는 이렇게 일해요</div>
+    <div class="sec-divider"></div>
+    <div class="culture-img-box">
+      <img id="cultureWay" alt="원익 Way" style="width:100%;display:block;margin-bottom:24px">
+      <img id="cultureCreed" alt="원익인 신조" style="width:100%;display:block">
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title"><span class="ico">👌</span> 이런 점이 좋습니다</div>
+    <div class="sec-divider"></div>
+    <div class="benefit-grid" id="benefitGrid"></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title"><span class="ico">💼</span> 모집 포지션</div>
+    <div class="sec-divider"></div>
+    <div class="filter-row" id="filterRow"></div>
+    <div class="jlist" id="jobList"></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title"><span class="ico">🚀</span> 전형절차</div>
+    <div class="sec-divider"></div>
+    <div class="process-wrap">
+      <div class="process-row" id="processRow"></div>
+      <div class="process-note" id="processNote"></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-title"><span class="ico">📍</span> 우리 여기 있어요</div>
+    <div class="sec-divider"></div>
+    <div class="loc-grid" id="locationGrid"></div>
+  </div>
+
+  <div class="apply-bar">
+    <div class="apply-left">
+      <h3 id="applyTitle"></h3>
+      <p id="applyDesc"></p>
+      <div class="contact" id="applyContact"></div>
+    </div>
+    <a class="abtn" id="applyButton" href="#" target="_blank" rel="noreferrer">지원하기 →</a>
+  </div>
+</div>
+
+<script>
+const ASSETS = {
+  logo: "images/logo.png",
+  heroImage: "images/hero.png",
+  cultureWay: "images/culture-way.png",
+  cultureCreed: "images/culture-creed.png"
+};
+
+/*
+=============================================
+비개발자 편집 안내
+이 파일에서는 아래 SITE_DATA 부분만 수정하면 됩니다.
+- 새 포지션 추가: SITE_DATA.positions 안에서 기존 포지션 1개를 복사해서 붙여넣기
+- 포지션 마감: 해당 포지션 객체 전체를 삭제
+- 최근 소식 수정: SITE_DATA.news 수정
+- 지원 링크 변경: SITE_DATA.apply.url 수정
+- 연락처 변경: SITE_DATA.apply.contact 수정
+- 회사 소개 / 복리후생 / 전형절차 / 근무지: 각 배열/문구 수정
+
+주의:
+- 따옴표(")와 쉼표(,)는 지우지 마세요.
+- 가장 쉬운 방법은 '기존 항목을 복사 -> 내용만 바꾸기' 입니다.
+=============================================
+*/
+const SITE_DATA = {
+  "hero": {
+    "title": "<span style=\"color:#60A5FA;\">원익로보틱스</span>와 함께<br>로봇산업의 새로운 가능성을 만들어갈 인재를 찾습니다.",
+    "sub": "원익로보틱스는 첨단 로봇공학 및 AI 기술을 기반으로 자체 개발한 AMR·AMMR와 로봇핸드(Allegro Hand)로<br>산업 현장의 자동화를 실현하는 로봇 자동화 전문기업입니다.<br>로봇 공학 및 최신 자동화 기술에 대한 깊은 이해를 바탕으로<br>더 나은 미래를 함께 만들어갈 분들을 기다립니다.",
+    "badge": "🤖 Movement to Tomorrow",
+    "tags": [
+      "#AllegroHand",
+      "#AMR",
+      "#AMMR",
+      "#PhysicalAI",
+      "#RobotAutomation"
+    ]
+  },
+  "stats": [
+    {
+      "num": "10",
+      "lbl": "모집 포지션"
+    },
+    {
+      "num": "정규직",
+      "lbl": "고용형태 · 수습 3개월"
+    },
+    {
+      "num": "판교 · 안양",
+      "lbl": "근무지"
+    },
+    {
+      "num": "채용 시 마감",
+      "lbl": "상시 접수"
+    }
+  ],
+  "about": [
+    {
+      "icon": "🦾",
+      "title": "로봇핸드 (Allegro Hand)",
+      "desc": "독립적인 전류제어 관절을 갖춘 Allegro Hand는 로봇 기능 연구개발과 휴머노이드 로봇을 위한 완벽한 플랫폼입니다. CES 2026, AW 2026 등 글로벌 무대에서 정밀 조작 기술을 선보이고 있습니다."
+    },
+    {
+      "icon": "🤖",
+      "title": "AMMR · AMR 자율주행 로봇",
+      "desc": "AI 기반 자율주행 로봇으로 공정이나 설비가 바뀌어도 유연하게 대응합니다. 최대 100대 실시간 관제가 가능한 ACS(통합 관제 시스템)로 ERP/MES 연동까지 지원합니다."
+    },
+    {
+      "icon": "🚀",
+      "title": "지금이 가장 흥미로운 시점",
+      "desc": "산자부 '휴머노이드 로봇 손 개발과제' 총괄연구개발기관 선정, Allegro Hand V5 Plus 산자부 장관상 수상, Physical AI 시대의 핵심 기업으로 빠르게 성장 중입니다."
+    },
+    {
+      "icon": "💡",
+      "title": "우리가 풀고 있는 문제",
+      "desc": "사람의 손을 대신해 복잡한 작업을 수행하는 로봇핸드, 사람 없이도 안전하게 이동·조작하는 자율주행 로봇. 머신텐딩, 핸들링, 빈피킹, 디지털트윈까지 산업 현장의 자동화를 실현합니다."
+    }
+  ],
+  "news": [
+    {
+      "date": "2026.03",
+      "badge": "전시/행사",
+      "title": "AW 2026 참가 — Allegro Hand 정밀 조작 기술 및 AMMR 자동화 기술 선보여"
+    },
+    {
+      "date": "2026.01",
+      "badge": "전시/행사",
+      "title": "CES 2026 참가 — 직구동 로봇핸드 신제품 공개, 글로벌 시장 주목"
+    },
+    {
+      "date": "2025.11",
+      "badge": "정부과제",
+      "title": "산업통상자원부 '휴머노이드 로봇 손 개발과제' 총괄 연구개발기관 선정"
+    },
+    {
+      "date": "2025.11",
+      "badge": "협약/MOU",
+      "title": "서울대학교 인공지능대학원과 AI 인재 육성 및 공동연구 MOU 체결"
+    },
+    {
+      "date": "2025.09",
+      "badge": "학술/전시",
+      "title": "CoRL 2025 참가 — 신형 로봇핸드 글로벌 학술 무대에서 선보여"
+    }
+  ],
+  "talent": [
+    {
+      "char": "🕊️",
+      "title": "자유",
+      "sub": "적극적 · 창의적 · 책임감",
+      "desc": "스스로 새로운 방법을 찾고, 열정을 가지고 업무를 끝까지 완수하는 인재"
+    },
+    {
+      "char": "💬",
+      "title": "소통",
+      "sub": "배려하는 · 경청하는 · 목표지향적",
+      "desc": "상대방을 존중하고 경청하며, 공동의 목표 달성을 위해 협력하는 인재"
+    },
+    {
+      "char": "😄",
+      "title": "행복",
+      "sub": "밝은 · 성장하는 · 솔선수범",
+      "desc": "긍정적인 태도로 성장하며, 모범을 보이는 인재"
+    }
+  ],
+  "benefits": [
+    "⏰ 시차출퇴근제 (8~10시, 30분 단위 운영)",
+    "📆 매월 마지막 주 금요일 Family Day (1시간 조기퇴근)",
+    "🧳 자유로운 연차 / 반차 사용",
+    "👕 자유복장 · 회식강요 안함",
+    "🍱 아침 / 점심 / 저녁식사 및 간식 제공 (구내식당)",
+    "🍹 각종 커피 및 음료 지원 (사내 카페테리아)",
+    "🏋️ 사내 헬스장 운영",
+    "🏫 자녀 학자금 지원",
+    "🎁 신규입사자 웰컴키트 제공",
+    "💐 생일 / 출산 축하 선물 · 명절 선물 지급",
+    "🩺 임직원 건강검진 지원 (만 35세 이상)",
+    "💵 각종 경조휴가 및 경조금"
+  ],
+  "filters": [
+    {
+      "cat": "All",
+      "label": "전체"
+    },
+    {
+      "cat": "HW",
+      "label": "하드웨어/전장"
+    },
+    {
+      "cat": "SW",
+      "label": "소프트웨어/제어"
+    },
+    {
+      "cat": "Biz",
+      "label": "경영지원"
+    }
+  ],
+  "positions": [
+    {
+      "cat": "SW",
+      "icon": "🤖",
+      "title": "로봇핸드 App SW 개발",
+      "tags": [
+      "학사, 6년이상"
+      ],
+      "meta": [
+        {
+          "label": "학력",
+          "value": "학사 이상(컴퓨터공학/로봇공학 전공)"
+        },
+        {
+          "label": "경력",
+          "value": "6년 이상(석사의 경우 3년 이상 개발 경험 필수)"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "담당업무",
+          "items": [
+            "로봇 핸드의 관절, 손가락 움직임 및 Grasping 모션 동작 기술 개발",
+            "로봇 핸드 손가락/관절 최적 경로 계산 및 충돌 회피 기능 구현",
+            "물체 파지시 센서 데이터 획득 및 Aanalysis",
+            "멀티 모달 센서를 활용한 모션 명령 전달 피드백 루프 구현",
+            "시뮬레이션 환경 구축 (디지털 트윈 환경 구성)",
+            "기존 핸드 및 센서 시스템 연동을 위한 API 사용 및 적용"
+          ]
+        },
+        {
+          "heading": "필수기술",
+          "items": [
+            "최소 1개 이상의 프로그래밍 역량 (Java, C++, JavaScipt 등)",
+            "운영체제 기본 개념 및 데이터 베이스(SQL, 정규화 등) 구성 경험",
+            "Git 등 형상 관리 및 IDE 개발 환경 경험"
+          ]
+        },
+        {
+          "heading": "우대사항",
+          "items": [
+            "관련 전공 석사 또는 박사 이상 학위 보유자",
+            "OS 환경에서 등을 활용한 사용자 친화적 UI 개발 경험",
+            "API(SDK) 활용한 시스템 설계 경험",
+            "Python/Linux 활용 경험",
+            "로봇 제어SW 개발/활용 경험 (OLP, ROS 등)"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "Biz",
+      "icon": "📊",
+      "title": "사업전략",
+      "tags": [
+        "학사, 10년",
+        "전략/기획/컨설팅"
+      ],
+      "meta": [
+        {
+          "label": "학력",
+          "value": "학사 이상"
+        },
+        {
+          "label": "경력",
+          "value": "10년 이상"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "담당업무",
+          "items": [
+            "로보틱스 사업 중장기 전략 및 성장 방향 수립",
+            "사업 포트폴리오 분석 및 투자 우선순위 도출",
+            "국내외 로보틱스 산업 구조 변화 및 기술 트렌드를 반영한 전략 방향 재정립",
+            "사업부별 전략과제 발굴 및 실행 로드맵(Action Plan) 수립",
+            "경쟁사 전략 벤치마킹 및 자사 사업 포지셔닝 전략 수립",
+            "인수합병 대상 발굴 및 사업적 타당성 검토",
+            "투자심의위원회 등 의사결정 보고자료 작성",
+            "사업계획서, 중장기 전략, IR/경영회의 자료 작성",
+            "개발, 영업, 마케팅 조직과 협업하여 실행 전략 구체화"
+          ]
+        },
+        {
+          "heading": "필수기술",
+          "items": [
+            "사업전략, M&A/투자 분석, 경영기획 분야 실무 경험",
+            "기술 기반 산업(로보틱스/자동화/AI 등)에 대한 이해",
+            "시장·사업 데이터를 구조화하여 전략 자료로 도출한 경험",
+            "사업성 분석 및 전략적 의사결정 지원 경험",
+            "숫자에 대한 감각 보유(재무/사업 지표 해석, 정량적 분석 및 모델링 역량)"
+          ]
+        },
+        {
+          "heading": "우대사항",
+          "items": [
+            "M&A, 투자 검토, 재무모델링 등 경영기획 분야 실무 경험자",
+            "사업기획/전략 부서 근무 경험자"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "Biz",
+      "icon": "💱",
+      "title": "재무/회계",
+      "tags": [
+        "학사, 10년",
+        "재무/회계/자금"
+      ],
+      "meta": [
+        {
+          "label": "학력",
+          "value": "학사 이상"
+        },
+        {
+          "label": "경력",
+          "value": "10년 이상"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "담당업무",
+          "items": [
+            "월/분기/연간 결산 총괄, 재무제표 작성 및 회계정책 수립",
+            "외부감사 대응, 모회사 연결 회계 및 내부회계관리제도 운영",
+            "연간/중장기 사업계획 수립·관리 및 원가/손익 분석",
+            "단·중장기 자금 수지 계획(Cash Flow Forecast) 수립 및 자금 집행·관리",
+            "차입금/운전자금/한도 관리 및 금융기관 커뮤니케이션",
+            "공정위 공시 및 주주총회/이사회 개최·운영·보고",
+            "IPO 준비 과정에서의 자금 구조 및 재무 안정성 관리",
+            "법인세, 부가세, 원천세 등 세무 관리 및 세무조사 대응",
+            "정부과제·R&D 비용 자금 집행 및 회계 처리 관리"
+          ]
+        },
+        {
+          "heading": "필수기술",
+          "items": [
+            "상장사 재무 기획/회계 팀장 경험",
+            "IPO 재무회계 실무 경험",
+            "재무회계를 바탕으로 재무기획 4년 이상 유경험자 우대",
+            "제조업 원가관리 3년 이상 유경험자 우대",
+            "CPA, AICPA, 세무사 자격 보유자"
+          ]
+        },
+        {
+          "heading": "우대사항",
+          "items": [
+            "상장사 재무기획/회계 팀장 경험",
+            "IPO 재무회계 실무 경험",
+            "재무회계 기반 재무기획 4년 이상",
+            "제조업 원가관리 3년 이상",
+            "CPA, AICPA, 세무사 자격 보유자"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "Biz",
+      "icon": "👥",
+      "title": "인사(HRD/채용/조직문화) 담당자",
+      "tags": [
+        "학사, 6~10년 이하",
+        "HRD / 채용 / 조직문화"
+      ],
+      "meta": [
+        {
+          "label": "학력",
+          "value": "학사 이상"
+        },
+        {
+          "label": "경력",
+          "value": "6~10년 이하"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "담당업무",
+          "items": [
+            "채용 계획 수립 및 인력 운영(수요 예측·채용 전략)",
+            "채용 전 과정 운영 및 채용채널/헤드헌팅 관리, 채용 데이터 분석",
+            "채용 브랜딩 및 온보딩 프로그램 기획·운영",
+            "연간 교육체계(HRD 로드맵) 수립 및 운영",
+            "직급별·직무별 교육과정 기획·운영 (리더십, 직무역량 등)",
+            "핵심인재 육성 및 경력개발(CDP) 운영",
+            "조직문화 진단 및 개선 활동 기획·운영",
+            "조직 몰입도·만족도 서베이 설계 및 결과 분석",
+            "핵심가치 내재화 및 사내 커뮤니케이션 활성화",
+            "사내 이벤트/제도 기획 및 조직 변화관리 지원"
+          ]
+        },
+        {
+          "heading": "자격요건",
+          "items": [
+            "인사데이터 관리 및 엑셀/PPT 사용 우수자",
+            "커뮤니테이션 및 이해관계자 조율 역량 우수자",
+            "기획력 및 문서작성 역량 보유자"
+          ]
+        },
+        {
+          "heading": "우대사항",
+          "items": [
+            "HRM 실무 경험 보유자",
+            "교육체계 및 제도 설계 경험 보유자",
+            "성장하는 조직에서 제도설계 경험자",
+            "긍정적이고 주도적인 업무 태도 보유자"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "SW",
+      "icon": "🧑‍💻",
+      "title": "로봇핸드 제어 엔지니어",
+      "tags": [
+        "석사, 5년 이상"
+      ],
+      "meta": [
+        {
+          "label": "학력",
+          "value": "석사 이상"
+        },
+        {
+          "label": "경력",
+          "value": "5년 이상"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "담당업무",
+          "items": [
+            "로봇 제어 알고리즘 Architecture 설계",
+            "로봇핸드 제어 아키텍처 및 통신 구조 CONCEPT 설계",
+            "센서·구동 제어 요구사항 분석",
+            "로봇 제어 알고리즘 구현 및 분석",
+            "로봇 기구학/동역학 수학적 모델링 및 분석",
+            "제어 알고리즘 설계 및 구현",
+            "시뮬레이션 기반 제어알고리즘 분석",
+            "통신 인터페이스 설계(CAN, Ethernet 등)"
+          ]
+        },
+        {
+          "heading": "필수사항",
+          "items": [
+            "로보틱스 및 로봇 수학적 모델링 능력(Forward/Inverse Kinematics, Jacobian, Dynamics, Friction)",
+            "ROS1/ROS2 기반 로봇 제어 시스템 개발 경험",
+            "로봇 제어 알고리즘 구현 능력 (C/C++, Python 등 활용)",
+            "멀티센서 데이터 처리 및 제어 알고리즘 통합 경험",
+            "로봇 통신 인터페이스(CAN, Ethernet 등) 활용 능력",
+            "실시간 제어 주기 유지 및 성능 최적화 경험"
+          ]
+        },
+        {
+          "heading": "우대사항",
+          "items": [
+            "로봇핸드 또는 다자유도 매니퓰레이터 제어 경험자",
+            "로봇 모션 계획(Motion Planning) 및 최적화 경험자",
+            "로봇 힘/강성제어 개발 경험자",
+            "제어 알고리즘 검증 경험자",
+            "강화·모방학습 기반 제어 알고리즘 적용 경험자"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "SW",
+      "icon": "🚗",
+      "title": "ROS기반 주행SW 개발자",
+      "tags": [
+        "학사, 8년 이상"
+      ],
+      "meta": [
+        {
+          "label": "학력",
+          "value": "학사 이상"
+        },
+        {
+          "label": "경력",
+          "value": "8년 이상"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "담당업무",
+          "items": [
+            "주행관련 구동 모터 제어 알고리즘 개발",
+            "주행관련 각종 센서 장치 드라이버 개발",
+            "ROS기반 SLAM 및 네비게이션 알고리즘 개발"
+          ]
+        },
+        {
+          "heading": "필수기술",
+          "items": [
+            "전자/전기/제어 관련 전공자",
+            "ROS 개발 경험자ㆍC/C++ 또는 Python 중급이상",
+            "로보틱스 기술 분야 개발 경험자",
+            "AGV/AMR 관련 개발 경험자"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "HW",
+      "icon": "💡",
+      "title": "로봇핸드 회로개발",
+      "tags": [
+        "학사, 10년 이상",
+        "전자/전기공학 전공"
+      ],
+      "meta": [
+        {
+          "label": "학력",
+          "value": "학사 이상 (전자/전기공학 전공)"
+        },
+        {
+          "label": "경력",
+          "value": "10년 이상 (석사의 경우 3년 이상 개발 경험 필수)"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "담당업무",
+          "items": [
+            "로봇 핸드 모션을 관장하는 Motion B'd 회로 설계 및 Artwork 구성",
+            "로봇 핸드 다중 감각 센서 데이터 확보를 위한 Sensor B'd 회로 설계 및 Artwork 구성",
+            "회로도 및 PCB Artwork 설계에 대한 시뮬레이션 및 Artwork 최적화",
+            "모터/센서間 인터페이스 회로 구성",
+            "기내 배선용 Wire Harness 설계",
+            "신뢰성 및 성능 테스트 수행 및 개선"
+          ]
+        },
+        {
+          "heading": "필수기술",
+          "items": [
+            "아날로그/디지털 회로 설계 경험",
+            "PCB의 회로 및 주파수 특성 고려한 PCB Artwork 설계 경험",
+            "MCU 동작을 위한 주변 회로 설계 및 전력전자 제어 회로 설계 경험"
+          ]
+        },
+        {
+          "heading": "우대사항",
+          "items": [
+            "임베디드 시스템 펌웨어 개발 및 센서 인터페이스 확보 경험",
+            "시뮬레이션 기반 회로도 해석 경험",
+            "자동화 장비 내 부품개발 경험 (엔코더, 모터, 액츄에이터 등)",
+            "회로/전장 설계 관리 및 양산 적용 경험자"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "HW",
+      "icon": "🦾",
+      "title": "로봇핸드 조립",
+      "tags": [
+        "학력무관, 3년 이상"
+      ],
+      "meta": [
+        {
+          "label": "학력",
+          "value": "학력무관"
+        },
+        {
+          "label": "경력",
+          "value": "3년 이상(기계/전자/자동차 등 관련 업계 조립, 생산경력 3년이상)"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "담당업무",
+          "items": [
+            "로봇핸드 조립 및 셋업",
+            "초소형 모터·감속기·링크 구조 등 핵심 부품 정밀 조립",
+            "내부 배선(Harness) 연결, 센서 장착 및 구동부 유격 조정, 초기 영점 설정(Calibration)",
+            "품질 검사 및 기능 테스트",
+            "촉각/토크/근접 센서 데이터 정상 작동 여부 검증",
+            "품질 검사 기준서에 따른 외관·체결 토크 전수 검사",
+            "상산 공정 관리 및 설비 유지보수",
+            "작업 실적 기록 및 자재 관리"
+          ]
+        },
+        {
+          "heading": "필수기술",
+          "items": [
+            "기계 및 전자부품 조립, 생산 경험 보유",
+            "도면 해독 가능(기계도면, 전장 배선도)",
+            "조립, 생산 업무에 대한 이해 보유자"
+          ]
+        },
+        {
+          "heading": "우대사항",
+          "items": [
+            "로봇제품 조립, 생산 경력",
+            "공정경험(시운전, 캘리브레이션 등)",
+            "개선사항 발굴 및 생산성 향상 경험"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "HW",
+      "icon": "🖥️",
+      "title": "로봇핸드 펌웨어 엔지니어",
+      "tags": [
+        "학사, 5년 이상",
+        "전자/전기계열, 로봇공학계열 전공"
+      ],
+      "meta": [
+        {
+          "label": "학력",
+          "value": "학사 이상(전자/전기계열, 로봇공학계열 전공)"
+        },
+        {
+          "label": "경력",
+          "value": "5년 이상"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "담당업무",
+          "items": [
+            "로봇핸드 센서·구동 제어 보드의 펌웨어 구조 설계",
+            "실시간 제어(Feedback / Feedforward) 및 동기화 로직 아키텍처 구상",
+            "통신 프로토콜(UART, CAN, Ethernet, SPI 등) 설계 구상",
+            "RTOS 기반 제어 펌웨어 개발 및 최적화",
+            "센서·구동기 데이터 수집 및 처리 로직 구현",
+            "통신 인터페이스 드라이버 개발 및 디버깅"
+          ]
+        },
+        {
+          "heading": "필수사항",
+          "items": [
+            "32bit Cortex-M 계열 MCU 등 FW 개발 (C/C++ 활용) 경험자",
+            "모터 구동을 위한 PWM, ADC 및 센서 제어 경험",
+            "RTOS를 활용한 통신 인터페이스(UART, I2C, CAN, Ethernet 등)개발 능력"
+          ]
+        },
+        {
+          "heading": "우대사항",
+          "items": [
+            "AC/DC/BLDC 등의 모터 피드백 제어 경험 또는 로봇제어 경험자",
+            "각종 다관절 로봇 (산업용/협동 로봇) 개발 경험자",
+            "Analog, Digital I/O 등 Interface 설계 경험자",
+            "STM32 계열 및 FreeRTOS 개발 경험자 (부트로더 개발 경험)",
+            "로봇용 서보 드라이버 개발 경험"
+          ]
+        }
+      ]
+    },
+    {
+      "cat": "HW",
+      "icon": "⚡",
+      "title": "로봇핸드 기구설계",
+      "tags": [
+        "학사, 10년 이상"
+      ],
+      "meta": [
+        {
+          "label": "학력",
+          "value": "학사 이상"
+        },
+        {
+          "label": "경력",
+          "value": "10년 이상"
+        }
+      ],
+      "sections": [
+        {
+          "heading": "담당업무",
+          "items": [
+            "(구조) 모터, 감속기, 링크(Link), 와이어(Tendon wire) 등을 활용한 로봇핸드 메커니즘 설계",
+            "(구조) 다양한 센서를 활용한 로봇 핸드 구조 설계(손가락 촉각센서(Fingertip sensor)와 피부 센서(Skin sensor) 등)",
+            "(구조) 경량화 및 내구성 있는 로봇핸드 구조 설계",
+            "(전장) 구동계 전기배선을 고려한 구조 설계",
+            "(전장) 전장 및 하네스 설계"
+          ]
+        },
+        {
+          "heading": "필수기술",
+          "items": [
+            "로봇핸드 기구 설계/제작/Test 경험",
+            "소형 구동기(Actuator)를 적용한 로봇 설계/제작/Test 경험",
+            "Dynamic 설계 및 해석 업무 경험자",
+            "로봇 기구학 및 동역학 기술에 대한 지식",
+            "CAD : SolidWorks, Pro-E 등"
+          ]
+        },
+        {
+          "heading": "우대사항",
+          "items": [
+            "로봇핸드 또는 로봇 기구 설계/제작 경험",
+            "사출품, 판금물 기구 설계/제작 경험",
+            "기구 구조해석 및 최적설계 경험"
+          ]
+        }
+      ]
+    }
+  ],
+  "process": [
+    "서류 지원",
+    "서류 검토",
+    "1차 면접",
+    "2차 면접",
+    "건강검진/처우 협의",
+    "최종 합격"
+  ],
+  "process_note": "※2차 면접 통과 시 레퍼런스 체크를 진행합니다.",
+  "locations": [
+    {
+      "name": "판교 본사",
+      "addr": "경기도 성남시 분당구 판교로255번길 20<br>원익빌딩 4층"
+    },
+    {
+      "name": "원익로보틱스 연구소 (안양)",
+      "addr": "경기도 안양시 동안구 시민대로 327번길 11-31<br>글로텍디지털센터 4층 402호"
+    }
+  ],
+  "apply": {
+    "h3": "원익로보틱스와 함께 로봇산업의 미래를 만들어가세요",
+    "p": "입사지원 서류에 허위사실이 발견될 경우, 채용확정 이후라도 채용이 취소될 수 있습니다.",
+    "contact": "📧 &nbsp;robotics.biz@wonik.com &nbsp;&nbsp;📞 &nbsp;+82-31-8038-9180",
+    "url": "https://wonik.recruiter.co.kr/career/recruit"
+  }
+};
+
+function createEl(tag, className, htmlValue) {
+  const el = document.createElement(tag);
+  if (className) el.className = className;
+  if (htmlValue !== undefined) el.innerHTML = htmlValue;
+  return el;
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+}
+
+function renderStats() {
+  const statsRoot = document.getElementById('statsRoot');
+  statsRoot.innerHTML = '';
+  const stats = SITE_DATA.stats.map((item, index) => {
+    if (index === 0) {
+      return { ...item, num: String(SITE_DATA.positions.length) };
+    }
+    return item;
+  });
+  stats.forEach(item => {
+    const wrapper = createEl('div', 'stat-item');
+    wrapper.appendChild(createEl('div', 'stat-num', escapeHtml(item.num)));
+    wrapper.appendChild(createEl('div', 'stat-lbl', escapeHtml(item.lbl)));
+    statsRoot.appendChild(wrapper);
+  });
+}
+
+function renderHero() {
+  document.getElementById('heroLogo').src = ASSETS.logo;
+  document.getElementById('heroImage').src = ASSETS.heroImage;
+  document.getElementById('heroBadge').textContent = SITE_DATA.hero.badge;
+  document.getElementById('heroTitle').innerHTML = SITE_DATA.hero.title;
+  document.getElementById('heroSub').innerHTML = SITE_DATA.hero.sub;
+
+  const tagsRoot = document.getElementById('heroTags');
+  tagsRoot.innerHTML = '';
+  SITE_DATA.hero.tags.forEach(tag => {
+    tagsRoot.appendChild(createEl('span', 'hero-tag', escapeHtml(tag)));
+  });
+}
+
+function renderAbout() {
+  const root = document.getElementById('aboutGrid');
+  root.innerHTML = '';
+  SITE_DATA.about.forEach(item => {
+    const card = createEl('div', 'acard');
+    card.appendChild(createEl('div', 'acard-icon', escapeHtml(item.icon)));
+    card.appendChild(createEl('div', 'acard-title', escapeHtml(item.title)));
+    card.appendChild(createEl('div', 'acard-desc', escapeHtml(item.desc)));
+    root.appendChild(card);
+  });
+}
+
+function renderNews() {
+  const root = document.getElementById('newsGrid');
+  root.innerHTML = '';
+  SITE_DATA.news.forEach(item => {
+    const card = createEl('div', 'ncard');
+    card.appendChild(createEl('div', 'ncard-date', escapeHtml(item.date)));
+    card.appendChild(createEl('div', 'ncard-badge', escapeHtml(item.badge)));
+    card.appendChild(createEl('div', 'ncard-title', escapeHtml(item.title)));
+    root.appendChild(card);
+  });
+}
+
+function renderTalent() {
+  const root = document.getElementById('talentGrid');
+  root.innerHTML = '';
+  SITE_DATA.talent.forEach(item => {
+    const card = createEl('div', 'tcard');
+    card.appendChild(createEl('div', 'tcard-num', escapeHtml(item.char)));
+    card.appendChild(createEl('div', 'tcard-title', escapeHtml(item.title)));
+    card.appendChild(createEl('div', 'tcard-sub', escapeHtml(item.sub)));
+    card.appendChild(createEl('div', 'tcard-desc', escapeHtml(item.desc)));
+    root.appendChild(card);
+  });
+}
+
+function renderBenefits() {
+  const root = document.getElementById('benefitGrid');
+  root.innerHTML = '';
+  SITE_DATA.benefits.forEach(item => {
+    const wrap = createEl('div', 'bitem');
+    wrap.appendChild(createEl('div', 'bcheck', '✓'));
+    wrap.appendChild(createEl('div', 'btext', escapeHtml(item)));
+    root.appendChild(wrap);
+  });
+}
+
+function renderFilters() {
+  const root = document.getElementById('filterRow');
+  root.innerHTML = '';
+  const allCat = SITE_DATA.filters[0].cat;
+  SITE_DATA.filters.forEach((item, index) => {
+    const btn = createEl('button', `fbtn${index === 0 ? ' active' : ''}`);
+    btn.dataset.cat = item.cat;
+    const count = item.cat === allCat ? ` ${SITE_DATA.positions.length}` : '';
+    btn.textContent = `${item.label}${count}`;
+    btn.onclick = () => filterJobs(item.cat, btn);
+    root.appendChild(btn);
+  });
+}
+
+function renderPositions() {
+  const root = document.getElementById('jobList');
+  root.innerHTML = '';
+  SITE_DATA.positions.forEach(position => {
+    const card = createEl('div', 'jcard');
+    card.dataset.cat = position.cat;
+
+    const head = createEl('div', 'jhead');
+    head.onclick = () => toggle(head);
+    head.appendChild(createEl('div', 'jicon', escapeHtml(position.icon)));
+
+    const meta = createEl('div', 'jmeta');
+    meta.appendChild(createEl('div', 'jtitle', escapeHtml(position.title)));
+
+    const tags = createEl('div', 'jtags');
+    position.tags.forEach(tag => tags.appendChild(createEl('span', 'tag', escapeHtml(tag))));
+    meta.appendChild(tags);
+    head.appendChild(meta);
+    head.appendChild(createEl('span', 'chev', '&#8964;'));
+    card.appendChild(head);
+
+    const detail = createEl('div', 'jdetail');
+    const rbox = createEl('div', 'rbox');
+    position.meta.forEach(item => {
+      const ri = createEl('div', 'ri');
+      ri.appendChild(createEl('div', 'rl', escapeHtml(item.label)));
+      ri.appendChild(createEl('div', 'rv', escapeHtml(item.value)));
+      rbox.appendChild(ri);
+    });
+    detail.appendChild(rbox);
+
+    const dgrid = createEl('div', 'dgrid');
+    position.sections.forEach(section => {
+      const dc = createEl('div', 'dc');
+      dc.appendChild(createEl('h4', '', escapeHtml(section.heading)));
+      const ul = createEl('ul');
+      section.items.forEach(item => ul.appendChild(createEl('li', '', escapeHtml(item))));
+      dc.appendChild(ul);
+      dgrid.appendChild(dc);
+    });
+    detail.appendChild(dgrid);
+    card.appendChild(detail);
+    root.appendChild(card);
+  });
+}
+
+function renderProcess() {
+  const root = document.getElementById('processRow');
+  root.innerHTML = '';
+  SITE_DATA.process.forEach((item, index) => {
+    const step = createEl('div', 'ps');
+    step.appendChild(createEl('div', 'pn', String(index + 1)));
+    step.appendChild(createEl('div', 'pname', escapeHtml(item)));
+    root.appendChild(step);
+  });
+  document.getElementById('processNote').textContent = SITE_DATA.process_note;
+}
+
+function renderLocations() {
+  const root = document.getElementById('locationGrid');
+  root.innerHTML = '';
+  SITE_DATA.locations.forEach(item => {
+    const lc = createEl('div', 'lc');
+    lc.appendChild(createEl('div', 'lc-dot'));
+    const inner = createEl('div');
+    inner.appendChild(createEl('div', 'ln', escapeHtml(item.name)));
+    inner.appendChild(createEl('div', 'la', item.addr));
+    lc.appendChild(inner);
+    root.appendChild(lc);
+  });
+}
+
+function renderApply() {
+  document.getElementById('applyTitle').textContent = SITE_DATA.apply.h3;
+  document.getElementById('applyDesc').textContent = SITE_DATA.apply.p;
+  document.getElementById('applyContact').innerHTML = SITE_DATA.apply.contact;
+  document.getElementById('applyButton').href = SITE_DATA.apply.url;
+}
+
+function renderCulture() {
+  document.getElementById('cultureWay').src = ASSETS.cultureWay;
+  document.getElementById('cultureCreed').src = ASSETS.cultureCreed;
+}
+
+function toggle(head) {
+  const detail = head.nextElementSibling;
+  const chev = head.querySelector('.chev');
+  const open = detail.classList.contains('open');
+  detail.classList.toggle('open', !open);
+  chev.style.transform = open ? '' : 'rotate(180deg)';
+}
+
+function filterJobs(cat, btn) {
+  const allCat = SITE_DATA.filters[0].cat;
+  document.querySelectorAll('.fbtn').forEach(button => button.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.jcard').forEach(card => {
+    const cats = card.dataset.cat || '';
+    card.classList.toggle('hidden', cat !== allCat && !cats.split(/\s+/).includes(cat));
+  });
+}
+
+function renderAll() {
+  renderHero();
+  renderStats();
+  renderAbout();
+  renderNews();
+  renderTalent();
+  renderCulture();
+  renderBenefits();
+  renderFilters();
+  renderPositions();
+  renderProcess();
+  renderLocations();
+  renderApply();
+}
+
+document.addEventListener('DOMContentLoaded', renderAll);
+</script>
+</body>
+</html>
