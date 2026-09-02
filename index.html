@@ -1102,7 +1102,7 @@ function renderAbout() {
     const card = createEl('div', 'acard');
     card.appendChild(createEl('div', 'acard-icon', escapeHtml(item.icon)));
     card.appendChild(createEl('div', 'acard-title', escapeHtml(item.title)));
-    card.appendChild(createEl('div', 'acard-desc', escapeHtml(item.desc)));
+    card.appendChild(createEl('div', 'acard-desc', item.desc));
     root.appendChild(card);
   });
 }
